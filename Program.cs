@@ -13,3 +13,22 @@ string[] arrList = new string[amount];
 string[] arrTotal = new string[amount];
 int length = 3;
 int count = 0;
+
+for (int i = 0; i < amount; i++)
+{
+    Console.WriteLine($"Введите {i + 1} элемент: ");
+    string text = Console.ReadLine()!;
+    arrList[i] = text;
+}
+
+for (int i = 0; i < amount; i++)
+{
+    if (arrList[i].Length <= length)
+    {
+        arrTotal[count] = arrList[i];
+        count++;
+    }
+}
+
+Console.WriteLine();
+PrintArray(arrTotal);
